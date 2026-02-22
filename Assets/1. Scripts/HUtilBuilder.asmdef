@@ -1,0 +1,17 @@
+{
+    "name": "HUtilBuilder",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3c6c38e12d753d041943e59345ac5aa9",
+        "GUID:5629cf79022daa04f82d253af044aafa"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
