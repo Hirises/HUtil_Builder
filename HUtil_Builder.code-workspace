@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../HUtil"
+		}
+	],
+	"settings": {
+		"dotnet.defaultSolution": "HUtil_Builder.sln"
+	}
+}

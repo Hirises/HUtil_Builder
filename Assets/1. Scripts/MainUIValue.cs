@@ -1,9 +1,10 @@
+using HUtil.Observable;
 using UnityEngine;
 
 namespace HUtilBuilder
 {
     public record MainUIValue
     {
-        public string Title;
+        public ObservableProperty<string> title = new("Main Title");
     }
 }
