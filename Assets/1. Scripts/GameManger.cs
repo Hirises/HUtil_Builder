@@ -1,18 +1,18 @@
-using Aya.DataBinding;
 using UnityEngine;
+
+using HUtil.Runtime.UI;
+using HUtilBuilder;
 
 public class GameManger : MonoBehaviour
 {
-
-    [SerializeField] public string MainUIValue;
+    public MainUIValue playerData;
+    public ViewRoot viewRoot;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        var container = DataContainer.GetContainer("MainModule");
-
-        UBind.BindSource<string>("Title", () => MainUIValue);
-        UBind.BindTarget<string>("Title", value => MainUIValue = value);
+        playerData = new MainUIValue();
+        viewRoot.Bind(playerData);
     }
 
     // Update is called once per frame
