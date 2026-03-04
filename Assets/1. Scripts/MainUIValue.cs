@@ -6,10 +6,10 @@ using HUtil.Runtime.UI;
 
 namespace HUtilBuilder
 {
-    [GeneratePropertyBag]
+    [GeneratePropertyBag, Serializable]
     public partial record MainUIValue
     {
-        [CreateProperty]
+        [CreateProperty, SerializeField]
         [ViewModelValue(SyncronizeDirectionFlags.Both)]
         public ObservableProperty<string> title = new("Main Title");
     }
