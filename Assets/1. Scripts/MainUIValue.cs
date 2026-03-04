@@ -8,7 +8,7 @@ using HUtil.Runtime.Command;
 namespace HUtilBuilder
 {
     [GeneratePropertyBag, Serializable]
-    public partial record MainUIValue
+    public partial record MainUIValue : IViewModel
     {
         [CreateProperty, SerializeField]
         [ViewModelValue(SyncronizeDirectionFlags.Both)]
