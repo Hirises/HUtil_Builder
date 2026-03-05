@@ -1882,7 +1882,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1203796306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57175a8bcb01210479aa3c312867077a, type: 3}
+  m_Script: {fileID: 11500000, guid: e165a985a2255774cb5175f5d0920aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _viewModelType: HUtilBuilder.MainUIValue
@@ -1997,7 +1997,7 @@ MonoBehaviour:
       _value: 100
     GO:
       _value: {fileID: 0}
-  viewRoot: {fileID: 1203796311}
+  viewRoot: {fileID: 0}
 --- !u!1 &1367908309
 GameObject:
   m_ObjectHideFlags: 0

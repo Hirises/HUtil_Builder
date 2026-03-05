@@ -1,12 +1,12 @@
 using UnityEngine;
 
-using HUtil.Runtime.UI;
+using HUtil.UI;
 using HUtilBuilder;
 
 public class GameManger : MonoBehaviour
 {
     public MainUIValue playerData;
-    public ViewRoot viewRoot;
+    public UIComponent viewRoot;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
