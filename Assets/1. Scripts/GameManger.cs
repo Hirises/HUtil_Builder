@@ -12,7 +12,7 @@ public class GameManger : MonoBehaviour
     void Start()
     {
         playerData = new MainUIValue();
-        viewRoot.Bind(playerData);
+        viewRoot.ManualBind(playerData);
     }
 
     // Update is called once per frame

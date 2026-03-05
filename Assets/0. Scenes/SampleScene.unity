@@ -1775,10 +1775,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1203796310}
+  - component: {fileID: 1203796311}
   - component: {fileID: 1203796309}
   - component: {fileID: 1203796308}
   - component: {fileID: 1203796307}
-  - component: {fileID: 1203796311}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1988,15 +1988,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34b3d2272bc39246a4dbbf09eb1a881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData:
-    title:
-      _value: Main Title
-    descriptoin:
-      _value: Main Description
-    intValue:
-      _value: 100
-    GO:
-      _value: {fileID: 0}
   viewRoot: {fileID: 0}
 --- !u!1 &1367908309
 GameObject:
