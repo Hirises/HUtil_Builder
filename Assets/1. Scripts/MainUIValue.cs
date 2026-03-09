@@ -14,7 +14,7 @@ namespace HUtilBuilder
         public ObservableProperty<string> title;
 
         [CreateProperty, Bindable(BindDirectionFlags.ToData)]
-        public ObservableProperty<string> descriptoin;
+        public ObservableProperty<string> description;
 
         [CreateProperty, Bindable(BindDirectionFlags.ToUI)]
         public ObservableProperty<int> intValue;
@@ -25,11 +25,15 @@ namespace HUtilBuilder
         [CreateProperty, Bindable]
         public RelayCommand awesomeInternalLogic;
 
-        public MainUIValue(){
+        [CreateProperty, Bindable(BindDirectionFlags.Both)]
+        public ObservableProperty<IViewModel> ViewModel;
+
+        public MainUIValue(SubUIValue subUIValue){
             title = new ObservableProperty<string>("Main Title");
-            descriptoin = new ObservableProperty<string>("Main Description");
+            description = new ObservableProperty<string>("Main Description");
             intValue = new ObservableProperty<int>(100);
             GO = new ObservableProperty<GameObject>(null);
+            ViewModel = new ObservableProperty<IViewModel>(subUIValue);
             awesomeInternalLogic = new RelayCommand(AwesomeInternalLogic);
         }
 
