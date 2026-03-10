@@ -13,33 +13,35 @@ namespace HUtilBuilder
         [CreateProperty, Bindable]
         public ObservableProperty<string> title;
 
-        [CreateProperty, Bindable(BindDirectionFlags.ToData)]
+        [CreateProperty, Bindable(BindingDirectionFlags.ToData)]
         public ObservableProperty<string> description;
 
-        [CreateProperty, Bindable(BindDirectionFlags.ToUI)]
+        [CreateProperty, Bindable(BindingDirectionFlags.ToUI)]
         public ObservableProperty<int> intValue;
 
-        [CreateProperty, Bindable(BindDirectionFlags.Both)]
+        [CreateProperty, Bindable(BindingDirectionFlags.Both)]
         public ObservableProperty<GameObject> GO;
 
         [CreateProperty, Bindable]
         public RelayCommand awesomeInternalLogic;
 
-        [CreateProperty, Bindable(BindDirectionFlags.Both)]
-        public ObservableProperty<IViewModel> ViewModel;
+        [CreateProperty, Bindable(BindingDirectionFlags.Both)]
+        public ObservableList<IViewModel> ViewModel;
 
         public MainUIValue(SubUIValue subUIValue){
             title = new ObservableProperty<string>("Main Title");
             description = new ObservableProperty<string>("Main Description");
             intValue = new ObservableProperty<int>(100);
             GO = new ObservableProperty<GameObject>(null);
-            ViewModel = new ObservableProperty<IViewModel>(subUIValue);
+            ViewModel = new ObservableList<IViewModel>();
+            ViewModel.Add(subUIValue);
             awesomeInternalLogic = new RelayCommand(AwesomeInternalLogic);
         }
 
         private void AwesomeInternalLogic(){
             Debug.Log("AwesomeInternalLogic");
-            title.Value = "AwesomeInternalLogic";
+            title.Value = "AwesomeInternalLogic";;
+            ViewModel.Add(new SubUIValue());
         }
     }
 }

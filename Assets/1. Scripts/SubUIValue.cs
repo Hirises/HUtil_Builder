@@ -8,7 +8,7 @@ namespace HUtilBuilder
     [GeneratePropertyBag]
     public partial record SubUIValue : IViewModel
     {
-        [CreateProperty, Bindable(BindDirectionFlags.ToUI)]
+        [CreateProperty, Bindable(BindingDirectionFlags.ToUI)]
         public ObservableProperty<string> timeStamp;
 
         [CreateProperty, Bindable]
