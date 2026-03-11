@@ -28,6 +28,9 @@ namespace HUtilBuilder
         [CreateProperty, Bindable(BindingDirectionFlags.Both)]
         public ObservableList<IViewModel> ViewModel;
 
+        [CreateProperty, Bindable]
+        public ObservableProperty<bool> onoff;
+
         public MainUIValue(SubUIValue subUIValue){
             title = new ObservableProperty<string>("Main Title");
             description = new ObservableProperty<string>("Main Description");
@@ -36,12 +39,14 @@ namespace HUtilBuilder
             ViewModel = new ObservableList<IViewModel>();
             ViewModel.Add(subUIValue);
             awesomeInternalLogic = new RelayCommand(AwesomeInternalLogic);
+            onoff = new ObservableProperty<bool>(false);
         }
 
         private void AwesomeInternalLogic(){
             Debug.Log("AwesomeInternalLogic");
             title.Value = "AwesomeInternalLogic";;
             ViewModel.Add(new SubUIValue());
+            onoff.Value = !onoff.Value;
         }
     }
 }
