@@ -514,10 +514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1281737200}
-  - component: {fileID: 1281737202}
   - component: {fileID: 1281737201}
-  - component: {fileID: 1281737204}
-  - component: {fileID: 1281737203}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -550,113 +547,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1281737198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e165a985a2255774cb5175f5d0920aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parentBinder: {fileID: 1281737202}
-  _childBinders:
-  - {fileID: 1281737204}
---- !u!114 &1281737202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281737198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 020da92e1603dd94bb18057455928729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _parentBinder: {fileID: 0}
   _childBinders:
-  - {fileID: 1281737201}
-  _viewModelResolvers:
-  - _viewModelType: HUtilBuilder.MainUIValue, HUtilBuilder, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    _bindingMethod: 2
-    _viewModelProp:
-      _path: 
-      _direction: 0
-      _receivingType: 0
-      _allowDirection: 0
-    _bindMap:
-    - _sourcePropertyPath: title
-      _destinationPropertyPath: title
-    - _sourcePropertyPath: description
-      _destinationPropertyPath: description
-    - _sourcePropertyPath: intValue
-      _destinationPropertyPath: intValue
-    - _sourcePropertyPath: GO
-      _destinationPropertyPath: GO
-    - _sourcePropertyPath: awesomeInternalLogic
-      _destinationPropertyPath: awesomeInternalLogic
-    - _sourcePropertyPath: ViewModel
-      _destinationPropertyPath: ViewModel
-    - _sourcePropertyPath: onoff
-      _destinationPropertyPath: onoff
---- !u!114 &1281737203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281737198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b3d6d393e8fb2a408b89b6b620a31dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parentBinder: {fileID: 1281737204}
-  _childBinders: []
-  _target: {fileID: 1281737198}
-  _onAnimation: {fileID: 0}
-  _offAnimation: {fileID: 0}
-  _isOn_prop:
-    _path: onoff
-    _direction: 2
-    _receivingType: 6
-    _allowDirection: 1
---- !u!114 &1281737204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281737198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 020da92e1603dd94bb18057455928729, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parentBinder: {fileID: 1281737201}
-  _childBinders:
-  - {fileID: 1281737203}
   - {fileID: 1681322360}
-  _viewModelResolvers:
-  - _viewModelType: HUtilBuilder.MainUIValue, HUtilBuilder, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    _bindingMethod: 2
-    _viewModelProp:
-      _path: 
-      _direction: 0
-      _receivingType: 0
-      _allowDirection: 0
-    _bindMap:
-    - _sourcePropertyPath: title
-      _destinationPropertyPath: title
-    - _sourcePropertyPath: description
-      _destinationPropertyPath: description
-    - _sourcePropertyPath: intValue
-      _destinationPropertyPath: intValue
-    - _sourcePropertyPath: GO
-      _destinationPropertyPath: GO
-    - _sourcePropertyPath: awesomeInternalLogic
-      _destinationPropertyPath: awesomeInternalLogic
-    - _sourcePropertyPath: ViewModel
-      _destinationPropertyPath: ViewModel
-    - _sourcePropertyPath: onoff
-      _destinationPropertyPath: onoff
+  _viewModelResolvers: []
 --- !u!1 &1303206780
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a96ce57841c0c4aa3a982c47ee67a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parentBinder: {fileID: 1281737204}
+  _parentBinder: {fileID: 1281737201}
   _childBinders: []
   _target: {fileID: 1681322358}
   _baseText_prop:
