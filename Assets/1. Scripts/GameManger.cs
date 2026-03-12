@@ -7,7 +7,7 @@ using HUtil.Runtime.L10N;
 public class GameManger : MonoBehaviour
 {
     public MainUIValue playerData;
-    public UIComponent viewRoot;
+    public MonoResolver viewRoot;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
