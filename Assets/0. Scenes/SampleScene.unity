@@ -552,6 +552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336188318}
   - component: {fileID: 336188320}
+  - component: {fileID: 336188322}
   - component: {fileID: 336188321}
   - component: {fileID: 336188319}
   m_Layer: 5
@@ -691,12 +692,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909cf85273c50bb4f801ff95374d3ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parentBinder: {fileID: 746728497}
+  _parentBinder: {fileID: 336188322}
   _childBinders: []
   _target: {fileID: 336188319}
   _targetMesh: {fileID: 336188319}
   _baseText_prop:
-    _path: deckName
+    _path: cardCountString
     _direction: 2
     _receivingType:
       _baseType: 14
@@ -723,6 +724,65 @@ MonoBehaviour:
   _onClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &336188322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336188317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdb3d0ff90d8be4db5e4ff09d5753a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentBinder: {fileID: 746728497}
+  _childBinders:
+  - {fileID: 336188321}
+  _conditionType: 0
+  _int:
+    _path: 
+    _direction: 0
+    _receivingType:
+      _baseType: 10
+      IsCollection: 0
+    _allowDirection: 1
+  _long:
+    _path: 
+    _direction: 0
+    _receivingType:
+      _baseType: 11
+      IsCollection: 0
+    _allowDirection: 1
+  _float:
+    _path: 
+    _direction: 0
+    _receivingType:
+      _baseType: 12
+      IsCollection: 0
+    _allowDirection: 1
+  _double:
+    _path: 
+    _direction: 0
+    _receivingType:
+      _baseType: 13
+      IsCollection: 0
+    _allowDirection: 1
+  _bool:
+    _path: 
+    _direction: 0
+    _receivingType:
+      _baseType: 15
+      IsCollection: 0
+    _allowDirection: 1
+  _enum:
+    _path: 
+    _direction: 0
+    _receivingType:
+      _baseType: 16
+      IsCollection: 0
+    _allowDirection: 1
+  _outputPath: cardCountString
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,7 +1309,7 @@ MonoBehaviour:
   _parentBinder: {fileID: 746728496}
   _childBinders:
   - {fileID: 12326341}
-  - {fileID: 336188321}
+  - {fileID: 336188322}
   - {fileID: 55420667}
 --- !u!1 &832575517
 GameObject:
