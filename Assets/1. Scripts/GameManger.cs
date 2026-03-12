@@ -6,17 +6,26 @@ using HUtil.Runtime.L10N;
 
 public class GameManger : MonoBehaviour
 {
-    public MainUIValue playerData;
-    public MonoResolver viewRoot;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private Sprite _deckIcon;
     void Start()
     {
         L10NConverter.SetLocale("ko_KR");
-        var subUIValue = new SubUIValue();
-        BindingContext.StaticBind(subUIValue);
-        playerData = new MainUIValue(subUIValue);
-        viewRoot.ManualBind(playerData);
+        var mainUIValue = new MainUIValue();
+        mainUIValue.title.Value = "덱 리스트";
+        var deckInfoVM = new DeckInfoVM(_deckIcon);
+        deckInfoVM.deckName.Value = "deck 1";
+        deckInfoVM.cardCount.Value = 10;
+        mainUIValue.deckList.Add(deckInfoVM);
+        deckInfoVM = new DeckInfoVM(_deckIcon);
+        deckInfoVM.deckName.Value = "deck 2";
+        deckInfoVM.cardCount.Value = 20;
+        mainUIValue.deckList.Add(deckInfoVM);
+        deckInfoVM = new DeckInfoVM(_deckIcon);
+        deckInfoVM.deckName.Value = "deck 3";
+        deckInfoVM.cardCount.Value = 30;
+        mainUIValue.deckList.Add(deckInfoVM);
+        BindingContext.StaticBind(mainUIValue);
     }
 
     // Update is called once per frame

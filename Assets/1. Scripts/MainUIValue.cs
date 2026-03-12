@@ -13,40 +13,22 @@ namespace HUtilBuilder
         [CreateProperty, Bindable]
         public ObservableProperty<string> title;
 
-        [CreateProperty, Bindable(BindingDirectionFlags.ToData)]
-        public ObservableProperty<string> description;
-
-        [CreateProperty, Bindable(BindingDirectionFlags.ToUI)]
-        public ObservableProperty<int> intValue;
-
-        [CreateProperty, Bindable(BindingDirectionFlags.Both)]
-        public ObservableProperty<GameObject> GO;
+        [CreateProperty, Bindable]
+        public ObservableList<IViewModel> deckList = new ObservableList<IViewModel>();
 
         [CreateProperty, Bindable]
-        public RelayCommand awesomeInternalLogic;
+        public CommandBase addDeckCommand;
 
-        [CreateProperty, Bindable(BindingDirectionFlags.Both)]
-        public ObservableList<IViewModel> ViewModel;
-
-        [CreateProperty, Bindable]
-        public ObservableProperty<bool> onoff;
-
-        public MainUIValue(SubUIValue subUIValue){
+        public MainUIValue(){
             title = new ObservableProperty<string>("Main Title");
-            description = new ObservableProperty<string>("Main Description");
-            intValue = new ObservableProperty<int>(100);
-            GO = new ObservableProperty<GameObject>(null);
-            ViewModel = new ObservableList<IViewModel>();
-            ViewModel.Add(subUIValue);
-            awesomeInternalLogic = new RelayCommand(AwesomeInternalLogic);
-            onoff = new ObservableProperty<bool>(false);
+            addDeckCommand = new RelayCommand(AddDeck);
         }
 
-        private void AwesomeInternalLogic(){
-            Debug.Log("AwesomeInternalLogic");
-            title.Value = "AwesomeInternalLogic";;
-            ViewModel.Add(new SubUIValue());
-            onoff.Value = !onoff.Value;
+        private void AddDeck(){
+            var deckInfoVM = new DeckInfoVM(Resources.Load<Sprite>("DeckIcon"));
+            deckInfoVM.deckName.Value = "덱 " + (deckList.Count + 1);
+            deckInfoVM.cardCount.Value = deckList.Count;
+            deckList.Add(deckInfoVM);
         }
     }
 }
