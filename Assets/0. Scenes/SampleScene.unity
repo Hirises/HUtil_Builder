@@ -273,23 +273,23 @@ MonoBehaviour:
   _target: {fileID: 12326339}
   _targetMesh: {fileID: 12326339}
   _baseText_prop:
-    _path: deckName
     _direction: 2
+    _path: deckName
     _receivingType:
-      _baseType: 14
       IsCollection: 0
+      _baseType: 14
     _allowDirection: 1
   _onHoverIn_prop:
-    _path: 
     _direction: 0
+    _path: 
     _allowDirection: 2
   _onHoverOut_prop:
-    _path: 
     _direction: 0
+    _path: 
     _allowDirection: 2
   _onClick_prop:
-    _path: 
     _direction: 0
+    _path: 
     _allowDirection: 2
   _onHoverIn:
     m_PersistentCalls:
@@ -300,6 +300,100 @@ MonoBehaviour:
   _onClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &46155728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 46155729}
+  - component: {fileID: 46155730}
+  - component: {fileID: 46155731}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &46155729
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46155728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1519067011}
+  m_Father: {fileID: 418472054}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &46155730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46155728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66aa48fe922d1a943a0e9634425a70be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentBinder: {fileID: 0}
+  _childBinders:
+  - {fileID: 46155731}
+  - {fileID: 1519067013}
+  bindingInfos:
+  - _type:
+      IsCollection: 0
+      _baseType: 14
+    _propertyPath: handle
+    _allowedDirection: 3
+  - _type:
+      IsCollection: 0
+      _baseType: 70
+    _propertyPath: command
+    _allowedDirection: 2
+  - _type:
+      IsCollection: 0
+      _baseType: 12
+    _propertyPath: hello
+    _allowedDirection: 3
+--- !u!114 &46155731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46155728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bea791c0cc6a0b24884e855ed6ab9264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentBinder: {fileID: 46155730}
+  _childBinders: []
+  _target: {fileID: 46155728}
+  _onClip: {fileID: 7400000, guid: 7cbc88fa619a4a341982efe19f184dcf, type: 2}
+  _offClip: {fileID: 7400000, guid: ff3991cf81132ea4998210dde608cdd6, type: 2}
+  _isOn_prop:
+    _direction: 0
+    _path: 
+    _receivingType:
+      IsCollection: 0
+      _baseType: 15
+    _allowDirection: 1
 --- !u!1 &55420663
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,18 +486,25 @@ MonoBehaviour:
   _childBinders: []
   _target: {fileID: 55420665}
   _image_prop:
-    _path: deckIcon
     _direction: 2
+    _path: deckIcon
     _receivingType:
-      _baseType: 37
       IsCollection: 0
+      _baseType: 37
     _allowDirection: 1
   _color_prop:
-    _path: 
     _direction: 0
+    _path: 
     _receivingType:
-      _baseType: 34
       IsCollection: 0
+      _baseType: 34
+    _allowDirection: 1
+  _fill_prop:
+    _direction: 0
+    _path: 
+    _receivingType:
+      IsCollection: 0
+      _baseType: 12
     _allowDirection: 1
 --- !u!1 &330585543
 GameObject:
@@ -692,28 +793,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909cf85273c50bb4f801ff95374d3ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parentBinder: {fileID: 336188322}
+  _parentBinder: {fileID: 0}
   _childBinders: []
   _target: {fileID: 336188319}
   _targetMesh: {fileID: 336188319}
   _baseText_prop:
-    _path: cardCountString
     _direction: 2
+    _path: cardCountString
     _receivingType:
-      _baseType: 14
       IsCollection: 0
+      _baseType: 14
     _allowDirection: 1
   _onHoverIn_prop:
-    _path: 
     _direction: 0
+    _path: 
     _allowDirection: 2
   _onHoverOut_prop:
-    _path: 
     _direction: 0
+    _path: 
     _allowDirection: 2
   _onClick_prop:
-    _path: 
     _direction: 0
+    _path: 
     _allowDirection: 2
   _onHoverIn:
     m_PersistentCalls:
@@ -741,8 +842,8 @@ MonoBehaviour:
   - {fileID: 336188321}
   _conditionType: 0
   _int:
-    _path: 
-    _direction: 0
+    _path: cardCount
+    _direction: 2
     _receivingType:
       _baseType: 10
       IsCollection: 0
@@ -939,7 +1040,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!114 &418472052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,6 +1100,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1162372950}
+  - {fileID: 46155729}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1281,19 +1383,19 @@ MonoBehaviour:
       PublicKeyToken=null
     _bindingMethod: 0
     _viewModelProp:
-      _path: 
       _direction: 2
+      _path: 
       _receivingType:
-        _baseType: 72
         IsCollection: 0
+        _baseType: 72
       _allowDirection: 1
     _bindMap:
-    - _sourcePropertyPath: deckName
-      _destinationPropertyPath: deckName
-    - _sourcePropertyPath: cardCount
-      _destinationPropertyPath: cardCount
-    - _sourcePropertyPath: deckIcon
-      _destinationPropertyPath: deckIcon
+    - _sourcePath: 
+      _destinationPath: 
+    - _sourcePath: 
+      _destinationPath: 
+    - _sourcePath: 
+      _destinationPath: 
 --- !u!114 &746728497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,8 +1411,9 @@ MonoBehaviour:
   _parentBinder: {fileID: 746728496}
   _childBinders:
   - {fileID: 12326341}
-  - {fileID: 336188322}
+  - {fileID: 0}
   - {fileID: 55420667}
+  bindingInfos: []
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1463,226 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1992461298}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &835988965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 835988966}
+  - component: {fileID: 835988968}
+  - component: {fileID: 835988970}
+  - component: {fileID: 835988969}
+  - component: {fileID: 835988967}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &835988966
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835988965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1162372950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 130.56}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &835988967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835988965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &835988968
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835988965}
+  m_CullTransparentMesh: 1
+--- !u!114 &835988969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835988965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909cf85273c50bb4f801ff95374d3ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentBinder: {fileID: 835988970}
+  _childBinders: []
+  _target: {fileID: 835988967}
+  _targetMesh: {fileID: 835988967}
+  _baseText_prop:
+    _direction: 1
+    _path: asf
+    _receivingType:
+      IsCollection: 0
+      _baseType: 14
+    _allowDirection: 1
+  _onHoverIn_prop:
+    _direction: 3
+    _path: addDeckCommand
+    _allowDirection: 2
+  _onHoverOut_prop:
+    _direction: 0
+    _path: 
+    _allowDirection: 2
+  _onClick_prop:
+    _direction: 0
+    _path: 
+    _allowDirection: 2
+  _onHoverIn:
+    m_PersistentCalls:
+      m_Calls: []
+  _onHoverOut:
+    m_PersistentCalls:
+      m_Calls: []
+  _onClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &835988970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835988965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a916bdb1763675343a4392aadaf22252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentBinder: {fileID: 1162372951}
+  _childBinders:
+  - {fileID: 835988969}
+  _useDynamicFormat: 0
+  _formatText:
+    _direction: 0
+    _path: 
+    _receivingType:
+      IsCollection: 0
+      _baseType: 14
+    _allowDirection: 1
+  _format: '{0} format {1}'
+  _formatArgs:
+  - _direction: 2
+    _path: title
+    _receivingType:
+      IsCollection: 0
+      _baseType: 14
+    _allowDirection: 1
+  - _direction: 2
+    _path: 
+    _receivingType:
+      IsCollection: 0
+      _baseType: 14
+    _allowDirection: 1
+  _outputPath: asf
 --- !u!1 &1162372949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,6 +1715,7 @@ RectTransform:
   m_Children:
   - {fileID: 1931544209}
   - {fileID: 1926472135}
+  - {fileID: 835988966}
   m_Father: {fileID: 418472054}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1415,6 +1739,8 @@ MonoBehaviour:
   _childBinders:
   - {fileID: 1931544210}
   - {fileID: 1926472136}
+  - {fileID: 835988970}
+  bindingInfos: []
 --- !u!114 &1162372952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1433,21 +1759,21 @@ MonoBehaviour:
   _viewModelResolvers:
   - _viewModelType: HUtilBuilder.MainUIValue, HUtilBuilder, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-    _bindingMethod: 1
+    _bindingMethod: 0
     _viewModelProp:
-      _path: 
       _direction: 0
+      _path: 
       _receivingType:
-        _baseType: 72
         IsCollection: 0
+        _baseType: 72
       _allowDirection: 1
     _bindMap:
-    - _sourcePropertyPath: title
-      _destinationPropertyPath: title
-    - _sourcePropertyPath: deckList
-      _destinationPropertyPath: deckList
-    - _sourcePropertyPath: addDeckCommand
-      _destinationPropertyPath: addDeckCommand
+    - _sourcePath: title
+      _destinationPath: title
+    - _sourcePath: deckList
+      _destinationPath: deckList
+    - _sourcePath: addDeckCommand
+      _destinationPath: addDeckCommand
 --- !u!1 &1303206780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1819,118 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deckIcon: {fileID: 21300000, guid: 9e59970cb6cd6b54189812382e9e98b9, type: 3}
+--- !u!1 &1519067010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1519067011}
+  - component: {fileID: 1519067014}
+  - component: {fileID: 1519067013}
+  - component: {fileID: 1519067012}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1519067011
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519067010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 46155729}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1519067012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519067010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1519067013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519067010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7e58c592739a46beb46d0e6024b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentBinder: {fileID: 46155730}
+  _childBinders: []
+  _target: {fileID: 1519067012}
+  _image_prop:
+    _direction: 0
+    _path: 
+    _receivingType:
+      IsCollection: 0
+      _baseType: 37
+    _allowDirection: 1
+  _color_prop:
+    _direction: 0
+    _path: 
+    _receivingType:
+      IsCollection: 0
+      _baseType: 34
+    _allowDirection: 1
+  _fill_prop:
+    _direction: 2
+    _path: hello
+    _receivingType:
+      IsCollection: 0
+      _baseType: 12
+    _allowDirection: 1
+--- !u!222 &1519067014
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519067010}
+  m_CullTransparentMesh: 1
 --- !u!1 &1926472134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,8 +1987,8 @@ MonoBehaviour:
   _childBinders: []
   _target: {fileID: 1926472137}
   _onClick_cmd:
-    _path: addDeckCommand
     _direction: 3
+    _path: addDeckCommand
     _allowDirection: 2
 --- !u!114 &1926472137
 MonoBehaviour:
@@ -1688,8 +2126,9 @@ MonoBehaviour:
   _childBinders:
   - {fileID: 746728496}
   _list_prop:
-    _path: deckList
     _direction: 2
+    _path: deckList
+    _baseType: 72
     _allowDirection: 1
   _itemPrefab: {fileID: 746728496}
   _autoDestroyItem: 1

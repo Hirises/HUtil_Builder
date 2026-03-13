@@ -2,7 +2,6 @@ using UnityEngine;
 
 using HUtil.UI;
 using HUtilBuilder;
-using HUtil.Runtime.L10N;
 
 public class GameManger : MonoBehaviour
 {
@@ -10,9 +9,8 @@ public class GameManger : MonoBehaviour
     [SerializeField] private Sprite _deckIcon;
     void Start()
     {
-        L10NConverter.SetLocale("ko_KR");
         var mainUIValue = new MainUIValue();
-        mainUIValue.title.Value = "덱 리스트";
+        mainUIValue.title.Value = "Deck List";
         var deckInfoVM = new DeckInfoVM(_deckIcon);
         deckInfoVM.deckName.Value = "deck 1";
         deckInfoVM.cardCount.Value = 10;
