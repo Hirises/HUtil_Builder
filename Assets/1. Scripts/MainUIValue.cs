@@ -12,6 +12,8 @@ namespace HUtilBuilder
     {
         [CreateProperty, Bindable]
         public ObservableProperty<string> title;
+        [CreateProperty, Bindable]
+        public ObservableProperty<string> subTitle;
 
         [CreateProperty, Bindable]
         public ObservableList<IViewModel> deckList = new ObservableList<IViewModel>();
@@ -21,6 +23,7 @@ namespace HUtilBuilder
 
         public MainUIValue(){
             title = new ObservableProperty<string>("Main Title");
+            subTitle = new ObservableProperty<string>("Sub Title");
             addDeckCommand = new RelayCommand(AddDeck);
         }
 
